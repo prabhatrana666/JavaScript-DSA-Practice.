@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA in JS</title>
+</head>
+
+<body>
+
+    <input type="text" id="element">
+    <button onclick="getElement()">Get Element</button>
+
+
+    <script>
+
+        // Traversing
+
+        // let data = [9, 45, 1, 7, 28, 99, 78, 52, 85, 43];
+        // for (let i = 0; i < data.length; i++) {
+        //     console.log(data[i]);
+        // }
+
+        // Accessing
+
+        // let x = 3;
+        // console.log(data[3]); //7
+
+        // function getElement(){
+        //     let value=document.getElementById('element').value;
+        //     alert(data[value]);
+        // }
+
+        // Validation
+
+        let data = [9, 45, 1, 7, 28, 99, 78, 52, 85, 43];
+        console.log(data.length);
+
+        function getElement() {
+            let value = document.getElementById('element').value;
+            newValue = parseInt(value);
+            if (value < data.length && value > 0 && Number.isInteger(newValue) == true) {
+                alert(data[value]);
+            }
+
+            else {
+                alert(`Please enter a correct value 0 to ${data.length - 1}`);
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
